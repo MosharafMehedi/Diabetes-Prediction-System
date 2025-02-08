@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% load static %}
+
+
+<section class="herobg">
+
+  <div class="d-flex flex-wrap p-5  align-items-center background">
+
+
+    <div class="jumbotron btn_color">
+      <h1 class="display-4">Welcome to MedAi</h1>
+      <p class="lead">MedAi is a platform that helps you to predict the disease based on the symptoms you provide.
+      </p>
+      <hr class="my-4">
+      <p>It uses machine learning algorithms to predict the disease.</p>
+      <a class=" " href="{%url 'predict'%}" role="button">Predict Disease</a>
+    </div>
+  
+  
+    </div>
+    <div class="col-6 bo">
+      <img src="{% static 'images/bg2.png' %}" />
+    </div>
+    </div>
+
+
+</section>
+
+<section class="howWorkBackground">
+  <div class="container mt-5 mb-5 ">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>How it works</h2>
+        <p>MedAi uses machine learning algorithms to predict the disease based on the symptoms you provide.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 text-center">
+        <img style="width: 150px;height: 150px;" src="https://img.freepik.com/free-vector/person-with-cold-illustration_23-2148478446.jpg?t=st=1717930630~exp=1717934230~hmac=ee063f78b67aa57341153450cc2e8ec4b9fd442d39d04da92562bd2c8cd70802&w=740" />
+        <h4>Enter Symptoms</h4>
+        <p>Enter the symptoms you are facing</p>
+      </div>
+      <div class="col-4 text-center">
+        <img class="" style="width: 150px;height: 150px; " src="https://img.freepik.com/free-vector/augmented-reality-concept_23-2148789353.jpg?t=st=1717931044~exp=1717934644~hmac=07700904859214131d09f038881d3eca6d70464f3964b854b39a552586e5c1fd&w=740" />
+        <h4>Get Prediction</h4>
+        <p>Get the prediction of the disease based on the symptoms you provided</p>
+      </div>
+      <div class="col-4 text-center">
+        <img style="width: 150px;height: 150px;" src="https://img.freepik.com/free-vector/doctor-injecting-vaccine-patient-illustrated_23-2148821190.jpg?t=st=1717930907~exp=1717934507~hmac=803f23de454d0138023c30447ffbd28534526f3160587f714d04214a11ce99cc&w=740" />
+        <h4>Get Treatment</h4>
+        <p>Get the treatment for the disease predicted</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="doctorlist">
+  <div class="row teamstyle">
+    <h1>Our Team</h1>
+  </div>
+  <div class="row teamstyle">
+    <!-- Column 1-->
+    <div class="column">
+      <div class="card">
+        <div class="">
+          <img src="https://img.freepik.com/free-photo/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-talk-with-interlocutor-stands-against-white-wall-self-confident-man-freelancer_273609-16320.jpg?t=st=1718519301~exp=1718522901~hmac=147c460178ab85b8038c633ec0f23436a5a07fbbe99aa2d559ed33903809f9bb&w=740" />
+        </div>
+        <h3>Luna Turner</h3>
+        <p>Founder</p>
+        <div class="icons">
+          <a href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column 2-->
+    <div class="column">
+      <div class="card">
+        <div class="rounded mx-auto d-block">
+          <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?t=st=1718519562~exp=1718523162~hmac=a3b8c398776d8adaaee44cffa173995197ce367df97a3e7f5ee6cd5b3edb2f99&w=740" />
+        </div>
+        <h3>Bryant Hall</h3>
+        <p>Doctor</p>
+        <div class="icons">
+          <a href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Column 3-->
+    <div class="column">
+      <div class="card">
+        <div class="">
+          <img src="https://img.freepik.com/free-photo/portrait-joyful-young-man-white-shirt_171337-17467.jpg?t=st=1718519525~exp=1718523125~hmac=e4a61f2409bcad435692a7e5fb10513252c8aed3dbf44be04fe08f443b819b37&w=740" />
+        </div>
+        <h3>Hope Watkins</h3>
+        <p>Doctor</p>
+        <div class="icons">
+          <a href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contUs" id="ContactUs">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Phone Number</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+      </div>
+      <div class="col-6 ">
+        <img class="contactUs" src="https://i.ibb.co/rZDRV7V/man-working-computer-with-man-his-head-word-no-it-1113671-162-removebg-preview.png" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footerBg">
+  
+  <!-- get appartment -->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Get the app</h2>
+        <p>Download the app from the app store</p>
+        <button class="Dwbtn">Download Now</button>
+      </div>
+      <p>©copyright MedAi-2024</p>
+    </div>
+    
+</section>
+{% endblock %}
