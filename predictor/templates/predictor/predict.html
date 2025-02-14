@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block content %}
+    
+{% load static %}
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Custom CSS (if any) -->
+    <style>
+        body {
+            background: #f0f2f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-section {
+           
+            padding: 50px 0;
+        }
+
+        .predictive-form {
+            
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 auto;
+            width: 60%;
+            max-width: 800px;
+            background: url('https://img.freepik.com/free-vector/clean-medical-background_53876-116875.jpg?t=st=1719302348~exp=1719305948~hmac=217d1a799244c00522db03d2275b45eb87f30851b31d9e776670a245222db209&w=826') no-repeat center center;
+            background-size: cover;
+            
+        }
+
+        .predictive-form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-container .btn {
+            width: 50%;
+            background: linear-gradient(45deg, #007bff, #00d4ff);
+            border: none;
+            color: #fff;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 50px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-container .btn:hover {
+            background: linear-gradient(45deg, #0056b3, #0093c4);
+        }
+
+        .back-to-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-to-home:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-section">
+        <div class="container">
+            <form method='post' class="predictive-form ">
+                <h1>Diabetes Prediction Form</h1>
+                {% csrf_token %}
+                <div class="form-row">
+                    {% for field in form %}
+                        <div class="form-group col-md-6">
+                            {{ field.label_tag }}
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Predict</button>
+                </div>
+               
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+{% endblock %}
